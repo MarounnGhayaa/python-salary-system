@@ -14,3 +14,4 @@ total_amount = allocated_savings + allocated_rent + allocated_electricity
 print(f"Your total amount on allocations is: {total_amount}$.")
 remainder = salary - total_amount
 print(f"Your remainder is: {remainder}$.")
+print(f"Your estimated yearly rent is {allocated_rent * 12}$, and your estimated yearly electricity costs are {allocated_electricity * 12}")
