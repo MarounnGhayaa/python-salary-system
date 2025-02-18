@@ -12,3 +12,5 @@ print(f"Your rent percentage {rent}%, your allocated rent amount will be {alloca
 print(f"Your electricity percentage {electricity}%, your allocated electricity amount will be {allocated_electricity}$.")
 total_amount = allocated_savings + allocated_rent + allocated_electricity
 print(f"Your total amount on allocations is: {total_amount}$.")
+remainder = salary - total_amount
+print(f"Your remainder is: {remainder}$.")
