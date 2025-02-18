@@ -16,3 +16,5 @@ remainder = salary - total_amount
 print(f"Your remainder is: {remainder}$.")
 print(f"Your estimated yearly rent is {allocated_rent * 12}$, and your estimated yearly electricity costs are {allocated_electricity * 12}")
 print(salary ** 2)
+random_money = 50.0
+print(f"If each month you had {random_money}$ for a year, {(random_money * 12) / (allocated_savings * 12)}$ will be left after diving by total amount allocated to savings.")
