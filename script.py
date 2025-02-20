@@ -1,11 +1,11 @@
 action = "yes"
-list = []
+salary_list = []
 while action != "no":
     salary = float(input("Enter your salary: "))
     month = input("Enter the month you're storing the salary for: ")
     savings = float(input("Enter your savings percentage: "))
     rent = float(input("Enter your rent percentage: "))
-    electricity = int(input("Enter your electricity percentage: "))
+    electricity = float(input("Enter your electricity percentage: "))
     allocated_savings = salary * savings / 100
     allocated_rent =  salary * rent / 100
     allocated_electricity = salary * electricity / 100
@@ -19,14 +19,20 @@ while action != "no":
         "allocated_rent": allocated_rent,
         "allocated_electricity": allocated_electricity,
     }
-    list.append(calculations)
+    salary_list.append(calculations)
     action = input("Do you want to proceed with another month (yes/no): ")
-print(list)
+print(salary_list)
+print("=" * 20)
+print("Salaries summary!")
+print("=" * 20)
+for salary in salary_list:
+    print(f"Month: {salary['month']}")
+    print(f"Salary: {salary['salary']}$")
+    print(f"Savings: {salary['savings']}% --> {salary['allocated_savings']}$")
+    print(f"Rent: {salary['rent']}% --> {salary['allocated_rent']}$")
+    print(f"Electricity: {salary['electricity']}% --> {salary['allocated_electricity']}$")
+    print("=" * 40)
 """ 
-print(f"Your salary {salary}$") 
-print(f"Your savings percentage {savings}%, your allocated savings amount will be {allocated_savings}$")
-print(f"Your rent percentage {rent}%, your allocated rent amount will be {allocated_rent}$")
-print(f"Your electricity percentage {electricity}%, your allocated electricity amount will be {allocated_electricity}$.")
 total_amount = allocated_savings + allocated_rent + allocated_electricity
 print(f"Your total amount on allocations is: {total_amount}$.")
 remainder = salary - total_amount
