@@ -1,9 +1,12 @@
 action = "yes"
 salary_list = []
+months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
 random_money = 50.0
 while action != "no":
     salary = float(input("Enter your salary: "))
-    month = input("Enter the month you're storing the salary for: ")
+    month = input("Enter the month you're storing the salary for: ").lower()
+    while month not in months:
+        month = input("Enter the month you're storing the salary for: ").lower()
     savings = float(input("Enter your savings percentage: "))
     rent = float(input("Enter your rent percentage: "))
     electricity = float(input("Enter your electricity percentage: "))
