@@ -36,6 +36,7 @@ for salary in salary_list:
     print(f"Electricity: {salary['electricity']}%   -->       {salary['allocated_electricity']}$")
     print(f"Total amount spent on savings, rent and electricity is: {salary['allocated_savings'] + salary['allocated_rent'] + salary['allocated_electricity']}$")
     print(f"The remainder of the salary including savings is: { salary['salary'] - (salary['allocated_rent'] + salary['allocated_electricity'])}$")
+    print(f"(Excluding savings --> { salary['salary'] - (salary['allocated_rent'] + salary['allocated_electricity'] + salary['allocated_savings'])}$)")
     print("According to this month:")
     print(f"- Your estimated yearly electricity is: {salary['allocated_electricity'] * 12}$")
     print(f"- Your estimated yearly rent is: {salary['allocated_rent'] * 12}$")
