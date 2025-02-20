@@ -1,5 +1,6 @@
 action = "yes"
 salary_list = []
+random_money = 50.0
 while action != "no":
     salary = float(input("Enter your salary: "))
     month = input("Enter the month you're storing the salary for: ")
@@ -35,7 +36,5 @@ for salary in salary_list:
     print("According to this month:")
     print(f"- Your estimated yearly electricity is: {salary['allocated_electricity'] * 12}$")
     print(f"- Your estimated yearly rent is: {salary['allocated_rent'] * 12}$")
+    print(f"- If each month you had {random_money}$ for a year: \n {(random_money * 12) / (allocated_savings * 12)}$ will be left after diving by total amount allocated to savings.")
     print("=" * 70)
-""" 
-random_money = 50.0
-print(f"If each month you had {random_money}$ for a year, {(random_money * 12) / (allocated_savings * 12)}$ will be left after diving by total amount allocated to savings.") """
