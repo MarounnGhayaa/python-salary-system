@@ -21,7 +21,7 @@ while action != "no":
         "allocated_electricity": allocated_electricity,
     }
     salary_list.append(calculations)
-    action = input("Do you want to proceed with another month (yes/no): ")
+    action = input("Do you want to proceed with another month (yes/no): ").lower()
 print("=" * 20)
 print("Salaries summary!")
 print("=" * 20)
