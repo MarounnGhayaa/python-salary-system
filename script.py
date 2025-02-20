@@ -30,10 +30,9 @@ for salary in salary_list:
     print(f"Savings: {salary['savings']}%       -->       {salary['allocated_savings']}$")
     print(f"Rent: {salary['rent']}%          -->       {salary['allocated_rent']}$")
     print(f"Electricity: {salary['electricity']}%   -->       {salary['allocated_electricity']}$")
-    print("=" * 40)
+    print(f"Total amount spent on savings, rent and electricity is: {salary['allocated_savings'] + salary['allocated_rent'] + salary['allocated_electricity']}$")
+    print("=" * 70)
 """ 
-total_amount = allocated_savings + allocated_rent + allocated_electricity
-print(f"Your total amount on allocations is: {total_amount}$.")
 remainder = salary - total_amount
 print(f"Your remainder is: {remainder}$.")
 print(f"Your estimated yearly rent is {allocated_rent * 12}$, and your estimated yearly electricity costs are {allocated_electricity * 12}")
