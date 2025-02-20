@@ -31,10 +31,9 @@ for salary in salary_list:
     print(f"Rent: {salary['rent']}%          -->       {salary['allocated_rent']}$")
     print(f"Electricity: {salary['electricity']}%   -->       {salary['allocated_electricity']}$")
     print(f"Total amount spent on savings, rent and electricity is: {salary['allocated_savings'] + salary['allocated_rent'] + salary['allocated_electricity']}$")
+    print(f"The remainder of the salary including savings is: { salary['salary'] - (salary['allocated_rent'] + salary['allocated_electricity'])}$")
     print("=" * 70)
 """ 
-remainder = salary - total_amount
-print(f"Your remainder is: {remainder}$.")
 print(f"Your estimated yearly rent is {allocated_rent * 12}$, and your estimated yearly electricity costs are {allocated_electricity * 12}")
 random_money = 50.0
 print(f"If each month you had {random_money}$ for a year, {(random_money * 12) / (allocated_savings * 12)}$ will be left after diving by total amount allocated to savings.") """
