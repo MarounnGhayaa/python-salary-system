@@ -1,7 +1,6 @@
 action = "yes"
 salary_list = []
 months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
-random_money = 50.0
 while action != "no":
     salary = float(input("Enter your salary: "))
     month = input("Enter the month you're storing the salary for: ").lower()
@@ -14,6 +13,7 @@ while action != "no":
     allocated_savings = salary * savings / 100
     allocated_rent =  salary * rent / 100
     allocated_electricity = salary * electricity / 100
+    random_money = float(input("Enter extra amount of money as an income if any: "))
     calculations = {
         "salary": salary,
         "month": month,
@@ -23,6 +23,7 @@ while action != "no":
         "allocated_savings": allocated_savings,
         "allocated_rent": allocated_rent,
         "allocated_electricity": allocated_electricity,
+        "random_money": random_money,
     }
     salary_list.append(calculations)
     action = input("Do you want to proceed with another month (yes/no): ").lower()
@@ -42,7 +43,7 @@ for salary in salary_list:
     print(f"- Your estimated yearly electricity is: {salary['allocated_electricity'] * 12}$")
     print(f"- Your estimated yearly rent is: {salary['allocated_rent'] * 12}$")
     if salary['allocated_savings'] == 0:
-        print(f"- If each month you had {random_money}$ for a year: \n {random_money * 12}$ will be left after diving by total amount allocated to savings.")
+        print(f"- If each month you had {salary['random_money']}$ for a year: \n {salary['random_money'] * 12}$ will be left after diving by total amount allocated to savings.")
     else:
-        print(f"- If each month you had {random_money}$ for a year: \n {(random_money * 12) / (salary['allocated_savings'] * 12)}$ will be left after diving by total amount allocated to savings.")
+        print(f"- If each month you had {salary['random_money']}$ for a year: \n {(salary['random_money'] * 12) / (salary['allocated_savings'] * 12)}$ will be left after diving by total amount allocated to savings.")
     print("=" * 70)
