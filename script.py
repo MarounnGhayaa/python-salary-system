@@ -50,7 +50,7 @@ print("Salaries summary!")
 print("=" * 20)
 for salary in salary_list:
     print(f"Month: {salary['month']}")
-    print(f"Salary: {salary['salary']}$ / Extra money: {random_money}$")
+    print(f"Salary: {salary['salary']}$ / Extra money: {salary['random_money']}$")
     print(f"Savings: {salary['savings']}%       -->       {salary['allocated_savings']}$")
     print(f"Rent: {salary['rent']}%          -->       {salary['allocated_rent']}$")
     print(f"Electricity: {salary['electricity']}%   -->       {salary['allocated_electricity']}$")
