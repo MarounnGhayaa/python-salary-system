@@ -7,9 +7,17 @@ while action != "no":
     while month not in months:
         print("Invalid month! Make sure to input an actual month.")
         month = input("Enter the month you're storing the salary for: ").lower()
-    savings = float(input("Enter your savings percentage: "))
-    rent = float(input("Enter your rent percentage: "))
-    electricity = float(input("Enter your electricity percentage: "))
+    while True:
+        savings = float(input("Enter your savings percentage: "))
+        rent = float(input("Enter your rent percentage: "))
+        electricity = float(input("Enter your electricity percentage: "))
+        if savings < 0 or savings > 100 or rent < 0 or rent > 100 or electricity < 0 or electricity > 100:
+            print("Each percentage must be between 0 and 100.")
+            continue
+        if savings + rent + electricity > 100:
+            print("The total of percentages exceeds 100.")
+            continue
+        break
     allocated_savings = salary * savings / 100
     allocated_rent =  salary * rent / 100
     allocated_electricity = salary * electricity / 100
