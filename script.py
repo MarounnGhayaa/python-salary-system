@@ -64,7 +64,7 @@ for salary in salary_list:
     if salary['random_money'] == 0:
         print("No extra money gained!")
     elif salary['allocated_savings'] == 0:
-        print(f"- If each month you had {salary['random_money']}$ for a year: \n {salary['random_money'] * 12}$ will be left after diving by total amount allocated to savings.")
+        print(f"- If each month you had {salary['random_money']}$ for a year: \n {salary['random_money'] * 12}$ will be left to you. (No total amount allocated to savings to divide by!)")
     else:
-        print(f"- If each month you had {salary['random_money']}$ for a year: \n {(salary['random_money'] * 12) / (salary['allocated_savings'] * 12)}$ will be left after diving by total amount allocated to savings.")
-    print("=" * 70)
+        print(f"- If each month you had {salary['random_money']}$ for a year: \n {(salary['random_money']) / (salary['allocated_savings'])}$ will be left after diving by total amount allocated to savings.")
+    print("=" * 85)
