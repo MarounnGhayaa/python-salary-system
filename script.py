@@ -1,3 +1,6 @@
+def allocations(salary, amount):
+    allocation = salary * amount /100
+    return allocation
 action = "yes"
 salary_list = []
 months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -28,9 +31,9 @@ while action != "no":
             print("The total of percentages exceeds 100.")
             continue
         break
-    allocated_savings = salary * savings / 100
-    allocated_rent =  salary * rent / 100
-    allocated_electricity = salary * electricity / 100
+    allocated_savings = allocations(salary, savings)
+    allocated_rent =  allocations(salary, rent)
+    allocated_electricity = allocations(salary, electricity)
     random_money = float(input("Enter extra amount of money as an income if any: "))
     calculations = {
         "salary": salary,
