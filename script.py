@@ -42,7 +42,9 @@ for salary in salary_list:
     print("According to this month:")
     print(f"- Your estimated yearly electricity is: {salary['allocated_electricity'] * 12}$")
     print(f"- Your estimated yearly rent is: {salary['allocated_rent'] * 12}$")
-    if salary['allocated_savings'] == 0:
+    if salary['random_money'] == 0:
+        print("No extra money gained!")
+    elif salary['allocated_savings'] == 0:
         print(f"- If each month you had {salary['random_money']}$ for a year: \n {salary['random_money'] * 12}$ will be left after diving by total amount allocated to savings.")
     else:
         print(f"- If each month you had {salary['random_money']}$ for a year: \n {(salary['random_money'] * 12) / (salary['allocated_savings'] * 12)}$ will be left after diving by total amount allocated to savings.")
