@@ -3,10 +3,20 @@ salary_list = []
 months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
 while action != "no":
     salary = float(input("Enter your salary: "))
-    month = input("Enter the month you're storing the salary for: ").lower()
-    while month not in months:
-        print("Invalid month! Make sure to input an actual month.")
+    while True:
         month = input("Enter the month you're storing the salary for: ").lower()
+        if month not in months:
+            print("Invalid month! Make sure to input an actual month.")
+            continue
+        duplicate = False
+        for salary_month in salary_list:
+            if salary_month['month'] == month:
+                duplicate = True
+                break
+        if duplicate:
+            print(f"{salary_month['month']} has already been added.")
+            continue
+        break
     while True:
         savings = float(input("Enter your savings percentage: "))
         rent = float(input("Enter your rent percentage: "))
