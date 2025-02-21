@@ -63,7 +63,7 @@ for salary in salary_list:
     print(f"Rent: {salary['rent']}%          -->       {salary['allocated_rent']}$")
     print(f"Electricity: {salary['electricity']}%   -->       {salary['allocated_electricity']}$")
     print(f"(Salary^2 --> {salary['salary'] ** 2}$)")
-    print(f"Total amount spent on savings, rent and electricity is: {totalSum(allocated_savings, allocated_rent, allocated_electricity)}$")
+    print(f"Total amount spent on savings, rent and electricity is: {totalSum(salary['allocated_savings'], salary['allocated_rent'], salary['allocated_electricity'])}$")
     print(f"The remainder of the salary including savings is: { salary['salary'] - (salary['allocated_rent'] + salary['allocated_electricity'])}$")
     print(f"(Excluding savings --> { salary['salary'] - (salary['allocated_rent'] + salary['allocated_electricity'] + salary['allocated_savings'])}$)")
     print("According to this month:")
