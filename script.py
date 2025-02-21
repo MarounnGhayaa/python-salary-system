@@ -6,6 +6,7 @@ while action != "no":
     salary = float(input("Enter your salary: "))
     month = input("Enter the month you're storing the salary for: ").lower()
     while month not in months:
+        print("Invalid month! Make sure to input an actual month.")
         month = input("Enter the month you're storing the salary for: ").lower()
     savings = float(input("Enter your savings percentage: "))
     rent = float(input("Enter your rent percentage: "))
